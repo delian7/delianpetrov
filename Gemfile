@@ -18,6 +18,7 @@ gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'sprockets_better_errors'
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
