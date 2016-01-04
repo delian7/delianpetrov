@@ -17,7 +17,7 @@ gem 'high_voltage'
 gem 'pg'
 group :development do
   gem 'better_errors'
-  # gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'binding_of_caller'
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
