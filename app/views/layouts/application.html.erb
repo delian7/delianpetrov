@@ -5,7 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Delianpetrov" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Delianpetrov" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', media: 'all' %>
+    <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,5 +21,6 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

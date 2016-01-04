@@ -1,0 +1,13 @@
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: #18bc9c;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #ffffff;
+  background-color: #1a242f;
+}
