@@ -651,3 +651,8 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+@media(max-width:767px) {
+  .portfolio-modal .modal-content {
+      padding: 100px 0;
+  }
+}
