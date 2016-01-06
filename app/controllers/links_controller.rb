@@ -5,10 +5,15 @@ class LinksController < ApplicationController
     nickname = params[:nickname]
 
     if full_url.present? && nickname.present?
-      Link.create(full_url: full_url, nickname: nickname)
-      redirect_to root_path, notice: "Nickname #{nickname} created."
+      if Link.exists?(nickname: nickname)
+        Link.find_by_nickname(nickname).update_attributes(full_url: full_url)
+        redirect_to root_path, notice: "Nickname #{nickname} already existed and was updated."
+      else
+        Link.create(full_url: full_url, nickname: nickname)
+        redirect_to root_path, notice: "Nickname #{nickname} created."
+      end
     else
-      redirect_to root_path, alert: "full_url or nickname not supplied, please try again"
+      redirect_to root_path, alert: "full_url and/or nickname not supplied, please try again"
     end
   end
 
