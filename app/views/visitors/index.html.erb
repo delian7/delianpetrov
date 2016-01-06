@@ -54,16 +54,6 @@
                     <%= image_tag "partner_up_thumb.png", class: "img-responsive", alt: "PartnerUP Project" %>
                 </a>
             </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#fridge_buddy" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <%= image_tag "fridgebuddy_thumb.png", class: "img-responsive", alt: "Fridge Buddy Project" %>
-                </a>
-            </div>
         </div>
     </div>
 </section>
@@ -80,6 +70,20 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="timeline">
+                  <li class="timeline-inverted">
+                      <div class="timeline-image">
+                          <%= image_tag "rails_logo.jpg", class: "img-responsive img-circle", alt: "Google Student Ambassador" %>
+                      </div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4>June 2015 - Present</h4>
+                              <h4 class="subheading">Hired as Ruby on Rails Developer</h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p class="text-muted">Started part time contracting work for ApplicantLab &amp; Visage</p>
+                          </div>
+                      </div>
+                  </li>
                     <li>
                         <div class="timeline-image">
                             <%= image_tag "uci_logo.jpg", class: "img-responsive img-circle", alt: "UCI Alumni" %>
@@ -102,7 +106,7 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2014-2015</h4>
+                                <h4>June 2014 - June 2015</h4>
                                 <h4 class="subheading">Google Student Ambassador</h4>
                             </div>
                             <div class="timeline-body">
@@ -165,8 +169,6 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -224,8 +226,21 @@
                     <div class="modal-body">
                         <h2>ApplicantLab</h2>
                         <hr class="star-primary">
-                        <%= image_tag "dashboard.png", class: "img-responsive img-centered" %>
-                        <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                        <%= image_tag "applab_dashboard.png", class: "img-responsive img-centered" %>
+                        <div class="description">
+                          <p>
+                            An interactive, computer-adaptive sequence of exercises that walks MBA applicants
+                            through everything they need to do to craft a strong business school applications.
+                          </p>
+                          <p><strong>Responsibilities:</strong> Full stack Ruby on Rails development responsible for front-end, back-end, testing, and maintenance</p>
+                          <p><strong>Achievements:</strong></p>
+                          <ul>
+                            <li>Setup Google OAUTH 2.0 login functionality using OmniAuth gem</li>
+                            <li>Integrated commercial payment gateway to accept PayPal/credit cards</li>
+                            <li>Coded jQuery scripts to autosave user input using AJAX</li>
+                            <li>Implemented Foundation Framework Joyride tutorials</li>
+                          </ul>
+                        </div>
                         <ul class="list-inline item-details">
                             <li>Client:
                                 <strong><a href="http://applicantlab.com">ApplicantLab, Inc.</a>
@@ -260,18 +275,31 @@
                         <h2>Visage</h2>
                         <hr class="star-primary">
                         <%= image_tag "visage_creator.png", class: "img-responsive img-centered", alt: "Visage" %>
-                        <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                        <div class="description">
+                          <p>
+                            For content marketers who need to create a lot of visual content,
+                            Visage is a design tool that makes on-brand content creation simple.
+                          </p>
+                          <p>
+                            <strong>Responsibilities:</strong> Back-end Ruby on Rails engineer working with a team of 5+ developers.
+                          </p>
+                          <p><strong>Achievements:</strong></p>
+                          <ul>
+                            <li>Used web sockets and commercial library to detect if two or more users are editing the same asset</li>
+                            <li>Integrated remote API to fetch image results using Knockout.js and created a view model to POST data to existing AWS S3 database</li>
+                            <li>Programmed custom in-house admin portal using ActiveAdmin gem</li>
+                          </ul>
+                        </div>
                         <ul class="list-inline item-details">
                             <li>Client:
                                 <strong><a href="http://visage.co">Visage.co</a>
                                 </strong>
                             </li>
                             <li>Date:
-                                <strong><a href="http://startbootstrap.com">April 2014</a>
-                                </strong>
+                                <strong>June 2015</strong>
                             </li>
                             <li>Service:
-                                <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <strong><a href="http://startbootstrap.com">Ruby on Rails Back-end Engineer</a>
                                 </strong>
                             </li>
                         </ul>
@@ -297,56 +325,30 @@
                         <h2>Partner Up</h2>
                         <hr class="star-primary">
                         <%= image_tag "partner_up.png", class: "img-responsive img-centered", alt: "PartnerUp project" %>
-                        <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                        <p>
+                          Ruby on Rails web application that allows university students to “partner up” through Facebook-like
+                          interface and outputs pair programming partnerships to course managers.
+                        </p>
+                        <div class="description">
+                          <p>Responsibilities:</p>
+                          <ul>
+                            <li>Wrote code using Test-Driven Development</li>
+                            <li>Wrote test cases for Capybara and RSpec for unit &amp; regression testing</li>
+                            <li>Setup MySQL database and Apache Server for Rails environment</li>
+                            <li>Designed database with Object-Relational Mapping</li>
+                          </ul>
+                        </div>
+
                         <ul class="list-inline item-details">
                             <li>Client:
-                                <strong><a href="http://startbootstrap.com">University of California, Irvine</a>
+                                <strong><a href="http://www.informatics.uci.edu/">University of California, Irvine</a>
                                 </strong>
                             </li>
                             <li>Date:
-                                <strong><a href="http://startbootstrap.com">April 2014</a>
-                                </strong>
+                                <strong>September 2014 - June 2015</strong>
                             </li>
                             <li>Service:
-                                <strong><a href="http://startbootstrap.com">Web Development</a>
-                                </strong>
-                            </li>
-                        </ul>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade" id="fridge_buddy" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h2>Partner Up</h2>
-                        <hr class="star-primary">
-                        <%= image_tag "fridgebuddy_thumb.png", class: "img-responsive img-centered", alt: "PartnerUp project" %>
-                        <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                        <ul class="list-inline item-details">
-                            <li>Client:
-                                <strong><a href="http://startbootstrap.com">University of California, Irvine</a>
-                                </strong>
-                            </li>
-                            <li>Date:
-                                <strong><a href="http://startbootstrap.com">April 2014</a>
-                                </strong>
-                            </li>
-                            <li>Service:
-                                <strong><a href="http://startbootstrap.com">Web Development</a>
-                                </strong>
+                                <strong>Ruby on Rails Development</strong>
                             </li>
                         </ul>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
