@@ -190,7 +190,6 @@ header .intro-text .skills {
     border-color: transparent;
 }
 
-@media (min-width:767px) {
 .timeline {
   list-style: none;
   padding: 0;
@@ -283,7 +282,12 @@ header .intro-text .skills {
   text-transform: none
 }
 .timeline .timeline-body>p, .timeline .timeline-body>ul {
-  margin-bottom: 0
+  margin-bottom: 0;
+  color: white;
+}
+
+.timeline-image h4 {
+  color: rgb(103, 98, 98);
 }
 @media (min-width:768px) {
   .timeline:before {
@@ -372,7 +376,7 @@ section#portfolio {
 
 section.success {
     color: #fff;
-    background: #2574A9;
+    background: #6BB9F0;
 }
 
 section.success a,
