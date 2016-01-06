@@ -37,9 +37,6 @@ h6 {
 }
 
 .alert {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #a94442;
   text-transform: none;
   position: relative;
   top: -1em;
@@ -285,7 +282,10 @@ header .intro-text .skills {
   margin-bottom: 0;
   color: white;
 }
-
+.timeline .text-muted {
+  line-height: 1.2em;
+  font-size: 1.2em;
+}
 .timeline-image h4 {
   color: rgb(103, 98, 98);
 }
@@ -346,7 +346,7 @@ header .intro-text .skills {
     min-height: 170px
   }
   .timeline>li .timeline-panel {
-    padding: 0 20px 20px 100px
+    padding: 25px 20px 20px 100px
   }
   .timeline>li .timeline-image {
     width: 170px;
@@ -357,7 +357,7 @@ header .intro-text .skills {
     margin-top: 40px
   }
   .timeline>li.timeline-inverted>.timeline-panel {
-    padding: 0 100px 20px 20px
+    padding: 20px 100px 20px 20px
   }
 }
 
