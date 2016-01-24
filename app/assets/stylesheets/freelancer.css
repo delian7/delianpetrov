@@ -493,6 +493,31 @@ footer .footer-below {
 .scroll-top .btn:focus {
   outline: 0;
 }
+.resume-download-button {
+  padding: 15px 10px 10px;
+  background: #f7f7f7;
+  box-shadow: 0 4px 3px rgba(0,0,0,.2);
+  height: 175px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #efefef;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0px auto 20px auto;
+  position: relative;
+  width: 250px;
+}
+
+.resume-label {
+    font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+    line-height: 1.25;
+    letter-spacing: -0.35px;
+    word-spacing: -0.25px;
+    text-transform: none;
+}
 .portfolio-modal .modal-content {
   background-color: #d9edf7;
   padding: 50px 0;
