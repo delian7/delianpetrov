@@ -1,28 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.1.6'
-gem 'rails', '4.2.1'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+ruby '2.5.3'
+gem 'rails', '~> 5.2.1'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 gem 'jquery-rails'
+gem 'puma', '~> 3.11'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 gem 'bootstrap-sass'
-gem 'high_voltage'
-gem 'pg'
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'sprockets_better_errors'
-  gem 'hub', :require=>nil
-  gem 'quiet_assets'
-  gem 'rails_layout'
-end
-group :production do
-  gem 'rails_12factor'
-end
+# gem 'pg'
