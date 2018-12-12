@@ -1,2 +1,4 @@
-class Link < ActiveRecord::Base
+require "google/cloud/datastore"
+
+class Link
 end

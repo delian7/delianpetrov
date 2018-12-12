@@ -5,3 +5,4 @@ Rails.application.routes.draw do
   post "send_email", to: "visitors#send_email"
   match "*path", to: "links#go_to_url", via: :all
 end
+

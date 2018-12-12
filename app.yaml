@@ -1,0 +1,16 @@
+runtime: ruby
+env: flex
+entrypoint: bundle exec foreman start --formation "$FORMATION"
+
+# [START formation]
+env_variables:
+  SECRET_KEY_BASE: Rails.application.credentials.secret_key_base
+  FORMATION: web=1
+# [END formation]
+
+health_check:
+  enable_health_check: False
+  check_interval_sec: 120
+  timeout_sec: 4
+  unhealthy_threshold: 2
+  healthy_threshold: 2
