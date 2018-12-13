@@ -1,0 +1,50 @@
+<div aria-hidden="true" class="portfolio-modal modal fade" id="seastatus" role="dialog" tabindex="-1">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>SeaStatus Marine Weather</h2>
+            <hr class="star-primary">
+            <%= image_tag "seastatus.png", class: "img-responsive img-centered", alt: "SeaStatus" %>
+            <p>
+              <a href="https://seastatus.com" target="_blank">SeaStatus</a> gives simple, personalized, and accurate marine weather reports to anyone with an internet-connected mobile device.
+            </p>
+            <div class="description">
+              <p>Responsibilities:</p>
+              <ul>
+                <li>Built using Ionic Framework 3 (Angular/Typescript) to manage one codebase for both iOS and Android apps</li>
+                <li>App aggregates raw data from datasets (NOAA, Darksky, PlanetOS, WeatherFlow, Worldtides) to populate text and charts.</li>
+                <li>Uses Amazon CloudFront (CDN) to cache responses for 1 hour. This means that a popular location will be really fast to load if it has been visited at least once in the last hour.</li>
+                <li>Built a rails application on Google Cloud to handle the fetching of data that uses delayed jobs (in memory for the fastest response time) to create 4+ jobs to fetch data from different datasets and stores the results in Firestore database</li>
+                <li>Directed client (app) to subscribes to valueChanges observable on the Firestore database so data is lazy-loaded</li>
+                <li>Developed by firebase cloud functions (nodeJS) to schedul push notification report based on user-selected timezone with the help of CRON jobs</li>
+              </ul>
+              <p>Achivements:</p>
+              <ul>
+                <li>Application won 2 award categories (Public Safety and Integrating Multiple Datasets) from the <a href="https://www.herox.com/bigoceanbutton/40-winners" target="_blank">XPrize Big Ocean Button Competition</a> for $25,000</li> 
+              </ul>
+            </div>
+
+            <ul class="list-inline item-details">
+              <li>Date:
+                <strong>June 2016 - December 2018</strong>
+              </li>
+              <li>Title:
+                <strong>Co-Founder &amp; Lead Engineer</strong>
+              </li>
+            </ul>
+            <button class="btn btn-default" data-dismiss="modal" type="button">
+              <i class="fa fa-times"></i>
+              Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

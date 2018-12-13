@@ -3,12 +3,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <%= image_tag("delianpetrov.jpg", alt: "Delian Petrov", class: "profile-pic img-responsive") %>
+        <%= image_tag("delianpetrov.png", alt: "Delian Petrov", class: "profile-pic img-responsive") %>
         <div class="intro-text">
           <span class="name">Delian Petrov</span>
           <hr class="star-light">
           <span class="skills">
-            Ruby on Rails Web Developer at <a href="http://visage.co" style="color:white">Visage</a>
+            Full Stack Web Developer specializing in Ruby on Rails &amp; Digital Nomad. Currently looking for remote positions. <a href="#contact" style="font-weight: 500">Let's Talk</a>
           </span>
         </div>
       </div>
@@ -22,21 +22,22 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>Portfolio</h2>
-        <hr class="star-primary">
+        <hr class="star-primary with-explainer">
+        <p class="explainer">Click on the image for more information</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#applab">
+      <div class="col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#seastatus">
           <div class="caption">
             <div class="caption-content">
-              <i class="fa fa-search-plus fa-2x"></i>
+              <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag("applab_thumb_front1.png", class: "img-responsive", alt: "ApplicantLab Front Page") %>
+          <%= image_tag("seastatus_thumb.png", class: "img-responsive", alt: "SeaStatus") %>
         </a>
       </div>
-      <div class="col-sm-4 portfolio-item">
+      <div class="col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#visage">
           <div class="caption">
             <div class="caption-content">
@@ -46,7 +47,19 @@
           <%= image_tag("visage_thumb.png", class: "img-responsive", alt: "Visage.co") %>
         </a>
       </div>
-      <div class="col-sm-4 portfolio-item">
+    </div>
+    <div class="row">
+      <div class="col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#applab">
+          <div class="caption">
+            <div class="caption-content">
+              <i class="fa fa-search-plus fa-2x"></i>
+            </div>
+          </div>
+          <%= image_tag("applab_thumb_front1.png", class: "img-responsive", alt: "ApplicantLab Front Page") %>
+        </a>
+      </div>
+      <div class="col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#partner_up">
           <div class="caption">
             <div class="caption-content">
@@ -72,6 +85,20 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="timeline">
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <%= image_tag "seastatus_logo.jpg", class: "img-responsive img-circle", alt: "SeaStatus" %>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>Jun 2016 - Dec 2018</h4>
+                <h4 class="subheading">Co-Founded <a href="https://seastatus.com" target="_blank">SeaStatus Marine Weather</a></h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">iPhone and Android application. Winner of XPrize $25k Challenge.</p>
+              </div>
+            </div>
+          </li>
           <li>
             <div class="timeline-image">
               <%= image_tag "visage_logo.png", class: "img-responsive img-circle", alt: "UCI Alumni" %>
@@ -79,7 +106,7 @@
             <div class="timeline-panel">
               <div class="timeline-heading">
                 <h4>Feb. 2016 - Dec. 2017</h4>
-                <h4 class="subheading">Full Stack Engineer at Visage</h4>
+                <h4 class="subheading">Full Stack Engineer at <a href="http://visage.co" target="_blank">Visage</a></h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
@@ -90,12 +117,12 @@
           </li>
           <li class="timeline-inverted">
             <div class="timeline-image">
-              <%= image_tag "rails_logo.jpg", class: "img-responsive img-circle", alt: "Google Student Ambassador" %>
+              <%= image_tag "applab_logo.jpg", class: "img-responsive img-circle", alt: "Google Student Ambassador" %>
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
                 <h4>Mar. 2015 - Dec. 2015</h4>
-                <h4 class="subheading">Ruby on Rails Engineer for ApplicantLab</h4>
+                <h4 class="subheading">Ruby on Rails Engineer for <a href="http://applicantlab.com" target="_blank">ApplicantLab</a></h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">Started part time contracting work for ApplicantLab &amp; Visage</p>
@@ -118,7 +145,8 @@
               </div>
             </div>
           </li>
-          <!-- <li class="timeline-inverted">
+          <% if false %>
+          <!--<li class="timeline-inverted">
             <div class="timeline-image">
               <%= image_tag "gsa_logo.png", class: "img-responsive img-circle", alt: "Google Student Ambassador" %>
             </div>
@@ -147,7 +175,8 @@
                 </p>
               </div>
             </div>
-          </li> -->
+          </li>-->
+          <% end %>
           <li class="timeline-inverted">
             <div class="timeline-image">
               <%= image_tag "anttech_logo.png", class: "img-responsive img-circle", alt: "anttech repair center" %>
@@ -171,7 +200,7 @@
             <div class="timeline-panel">
               <div class="timeline-heading">
                 <h4>September 2012</h4>
-                <h4 class="subheading">Technology Consultant for MDI Performance</h4>
+                <h4 class="subheading">Technology Consultant for <a href="http://mdicarbonfiber.com" target="_blank">MDI Performance</a></h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
@@ -180,12 +209,6 @@
               </div>
             </div>
           </li>
-          <!-- <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4 style="padding-top: 12px">Went to <br>
-                              UCIrvine</h4>
-                        </div>
-                    </li> -->
         </ul>
       </div>
     </div>
@@ -193,213 +216,10 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Contact Me</h2>
-        <hr class="star-primary">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <form id="contactForm" name="sentMessage" novalidate>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Name</label>
-              <input class="form-control" data-validation-required-message="Please enter your name." id="name" placeholder="Name" required type="text">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Email Address</label>
-              <input class="form-control" data-validation-required-message="Please enter your email address." id="email" placeholder="Email Address" required type="email">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Phone Number</label>
-              <input class="form-control" data-validation-required-message="Please enter your phone number." id="phone" placeholder="Phone Number" required type="tel">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Message</label>
-              <textarea class="form-control" data-validation-required-message="Please enter a message." id="message" placeholder="Message" required rows="5"></textarea>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <div class="row">
-            <div class="form-group col-xs-12">
-              <button class="btn btn-success btn-lg" type="submit">Send</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "visitors/partials/contact" %>
 
 <!-- Portfolio Modals -->
-<div aria-hidden="true" class="portfolio-modal modal fade" id="applab" role="dialog" tabindex="-1">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>ApplicantLab</h2>
-            <hr class="star-primary">
-            <%= image_tag "applab_dashboard.png", class: "img-responsive img-centered" %>
-            <div class="description">
-              <p>
-                An interactive, computer-adaptive sequence of exercises that walks MBA applicants through everything they need to do to craft a strong business school applications.
-              </p>
-              <p>
-                <strong>Responsibilities:</strong>
-                Full stack Ruby on Rails development responsible for front-end, back-end, testing, and maintenance</p>
-              <p>
-                <strong>Achievements:</strong>
-              </p>
-              <ul>
-                <li>Setup Google OAUTH 2.0 login functionality using OmniAuth gem</li>
-                <li>Integrated commercial payment gateway to accept PayPal/credit cards</li>
-                <li>Coded jQuery scripts to autosave user input using AJAX</li>
-                <li>Implemented Foundation Framework Joyride tutorials</li>
-              </ul>
-            </div>
-            <ul class="list-inline item-details">
-              <li>Client:
-                <strong>
-                  <a href="http://applicantlab.com">ApplicantLab, Inc.</a>
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2015</strong>
-              </li>
-              <li>Service:
-                <strong>Ruby on Rails Full Stack Web Development</strong>
-              </li>
-            </ul>
-            <button class="btn btn-default" data-dismiss="modal" type="button">
-              <i class="fa fa-times"></i>
-              Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div aria-hidden="true" class="portfolio-modal modal fade" id="visage" role="dialog" tabindex="-1">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Visage</h2>
-            <hr class="star-primary">
-            <%= image_tag "visage_creator.png", class: "img-responsive img-centered", alt: "Visage" %>
-            <div class="description">
-              <p>
-                For content marketers who need to create a lot of visual content, Visage is a design tool that makes on-brand content creation simple.
-              </p>
-              <p>
-                <strong>Responsibilities:</strong>
-                Back-end Ruby on Rails engineer working with a team of 5+ developers.
-              </p>
-              <p>
-                <strong>Achievements:</strong>
-              </p>
-              <ul>
-                <li>Used web sockets and commercial library to detect if two or more users are editing the same asset</li>
-                <li>Integrated remote API to fetch image results using Knockout.js and created a view model to POST data to existing AWS S3 database</li>
-                <li>Programmed custom in-house admin portal using ActiveAdmin gem</li>
-              </ul>
-            </div>
-            <ul class="list-inline item-details">
-              <li>Client:
-                <strong>
-                  <a href="http://visage.co">Visage.co</a>
-                </strong>
-              </li>
-              <li>Date:
-                <strong>June 2015</strong>
-              </li>
-              <li>Service:
-                <strong>
-                  <a>Ruby on Rails Back-end Engineer</a>
-                </strong>
-              </li>
-            </ul>
-            <button class="btn btn-default" data-dismiss="modal" type="button">
-              <i class="fa fa-times"></i>
-              Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div aria-hidden="true" class="portfolio-modal modal fade" id="partner_up" role="dialog" tabindex="-1">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Partner Up</h2>
-            <hr class="star-primary">
-            <%= image_tag "partner_up.png", class: "img-responsive img-centered", alt: "PartnerUp project" %>
-            <p>
-              Ruby on Rails web application that allows university students to “partner up” through Facebook-like interface and outputs pair programming partnerships to course managers.
-            </p>
-            <div class="description">
-              <p>Responsibilities:</p>
-              <ul>
-                <li>Wrote code using Test-Driven Development</li>
-                <li>Wrote test cases for Capybara and RSpec for unit &amp; regression testing</li>
-                <li>Setup MySQL database and Apache Server for Rails environment</li>
-                <li>Designed database with Object-Relational Mapping</li>
-              </ul>
-            </div>
-
-            <ul class="list-inline item-details">
-              <li>Client:
-                <strong>
-                  <a href="http://www.informatics.uci.edu/">University of California, Irvine</a>
-                </strong>
-              </li>
-              <li>Date:
-                <strong>September 2014 - June 2015</strong>
-              </li>
-              <li>Service:
-                <strong>Ruby on Rails Development</strong>
-              </li>
-            </ul>
-            <button class="btn btn-default" data-dismiss="modal" type="button">
-              <i class="fa fa-times"></i>
-              Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "visitors/portfolios/seastatus" %>
+<%= render "visitors/portfolios/applab" %>
+<%= render "visitors/portfolios/visage" %>
+<%= render "visitors/portfolios/partner_up" %>
