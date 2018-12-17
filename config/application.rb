@@ -17,10 +17,10 @@ module Delianpetrov
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      address:              'smtp.zoho.com',
+      address:              Rails.application.credentials[:smtp_host],
       port:                 465,
-      user_name:            Rails.application.credentials[:SMTP_USERNAME],
-      password:             Rails.application.credentials[:SMTP_PASSWORD],
+      user_name:            Rails.application.credentials[:smtp_username],
+      password:             Rails.application.credentials[:smtp_password],
       authentication:       :login,
       ssl:                  true,
       tls:                  true,
