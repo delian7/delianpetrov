@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "DelianPetrov.com" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Ruby on Rails Developer, UCIrvine Alumni, Tech Enthusiast" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Delian Petrov" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Digital Nomad & Full Stack Web Developer specializing in Ruby on Rails. UCI Alumni." %>">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
@@ -33,6 +33,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <%= csrf_meta_tags %>
+    <%= render 'analytics/google' if Rails.env.production? %>
   </head>
   <body id="page-top" class="index">
     <%= render 'layouts/navigation' %>
