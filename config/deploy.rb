@@ -3,10 +3,11 @@ lock "~> 3.11.0"
 
 set :application, "delianpetrov"
 set :repo_url, "git@github.com:delian7/delianpetrov.git"
+set :branch, ENV['BRANCH'] if ENV['BRANCH']
 
 set :deploy_to, '/home/delianpetrov0_gmail_com/delianpetrov/'
 
-append :linked_files, "config/database.yml", "config/secrets.yml"
+# append :linked_files, "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
 # Default branch is :master
