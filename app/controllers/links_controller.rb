@@ -5,14 +5,8 @@ class LinksController < ApplicationController
     name = params[:name]
 
     if url.present? && name.present?
-      existing_link = Link.find_by_name name
-      if existing_link.present?
-        existing_link.update(url: url)
-        redirect_to root_path, notice: "Link with name #{name} already existed and was updated."
-      else
-        Link.create(url: url, name: name)
-        redirect_to root_path, notice: "Link with name #{name} created."
-      end
+      Link.create(url: url, name: name)
+      redirect_to root_path, notice: "TinyURL #{name} created/updated."
     else
       redirect_to root_path, alert: "url and/or name not supplied, please try again"
     end
