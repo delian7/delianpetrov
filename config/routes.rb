@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'tiny_url', to: "links#create"
   get "list", to: "links#list"
   post "send_email", to: "visitors#send_email"
-  match "*path", to: "links#go_to_url", via: :all
+  get ':path' => "links#go_to_url", :as => :page, :constraints => lambda{|req| req.path !~ /\.(png|jpg|js|css)$/ }
 end
