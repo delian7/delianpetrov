@@ -1,24 +1,43 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+About
+=====
+Rails 5 Web App for https://delianpetrov.com.
+- Hosted on Compute Enginer on Google Cloud.
 
-Things you may want to cover:
+Setup Development Environment
+======
+1. Put `master.key` in `./config`.
+2. Put the `google_cloud_secrets.json` in `./config`.
+2. start the server and install dependencies
 
-* Ruby version
+```
+docker-compose up to start the server.
+```
 
-* System dependencies
+Set up gcloud-sdk
+----
 
-* Configuration
+1. Run the login command and login
+```
+docker-compose exec delianpetrov gcloud auth login
+```
 
-* Database creation
+Deploying
+====
 
-* Database initialization
+1. Open bash on container
+```
+docker-compose exec delianpetrov /bin/bash
+```
+2. Run this script
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+gcloud compute instances stop delianpetrov0 && \
+gcloud compute instances set-machine-type delianpetrov0 --machine-type n1-standard-1 && \
+gcloud compute instances start delianpetrov0 && \
+sleep 30s && \
+cap production deploy && \
+gcloud compute instances stop delianpetrov0 && \
+gcloud compute instances set-machine-type delianpetrov0 --machine-type f1-micro && \
+gcloud compute instances start delianpetrov0
+```

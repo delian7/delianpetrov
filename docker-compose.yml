@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  delianpetrov:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/code
+      - /code/node_modules
+    stdin_open: true
+    tty: true
+    environment:
+      - EDITOR=nano
+      - GOOGLE_APPLICATION_CREDENTIALS=./config/google_cloud/secrets.json
+    container_name: delianpetrov
