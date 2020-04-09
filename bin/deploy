@@ -1,0 +1,12 @@
+#!/bin/bash
+eval `ssh-agent -s`
+ssh-add ./config/google_cloud/google_compute_engine
+
+gcloud compute instances stop delianpetrov0 && \
+gcloud compute instances set-machine-type delianpetrov0 --machine-type n1-standard-1 && \
+gcloud compute instances start delianpetrov0 && \
+sleep 30s && \
+cap production deploy && \
+gcloud compute instances stop delianpetrov0 && \
+gcloud compute instances set-machine-type delianpetrov0 --machine-type f1-micro && \
+gcloud compute instances start delianpetrov0

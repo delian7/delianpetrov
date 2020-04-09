@@ -9,7 +9,13 @@
 
 server '35.202.139.248', user: 'delianpetrov0_gmail_com', roles: %w{app db web}
 
-set :ssh_options, { forward_agent: true, auth_methods: ['publickey'], keys: %w(~/.ssh/google_compute_engine) }
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: ['publickey'],
+  keys: %w(./config/google_cloud/google_compute_engine)
+}
+
+set :bundle_flags, '--deployment'
 
 
 # role-based syntax

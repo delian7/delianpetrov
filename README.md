@@ -6,12 +6,11 @@ Rails 5 Web App for https://delianpetrov.com.
 
 Setup Development Environment
 ======
-1. Put `master.key` in `./config`.
-2. Put the `google_cloud_secrets.json` in `./config`.
-2. start the server and install dependencies
+1. Extract `google_cloud_secrets.zip` to `./config`.
+2. start the server and install dependencies by running
 
 ```
-docker-compose up to start the server.
+docker-compose up
 ```
 
 Set up gcloud-sdk
@@ -29,15 +28,4 @@ Deploying
 ```
 docker-compose exec delianpetrov /bin/bash
 ```
-2. Run this script
-
-```
-gcloud compute instances stop delianpetrov0 && \
-gcloud compute instances set-machine-type delianpetrov0 --machine-type n1-standard-1 && \
-gcloud compute instances start delianpetrov0 && \
-sleep 30s && \
-cap production deploy && \
-gcloud compute instances stop delianpetrov0 && \
-gcloud compute instances set-machine-type delianpetrov0 --machine-type f1-micro && \
-gcloud compute instances start delianpetrov0
-```
+2. Run `bin/deploy`
