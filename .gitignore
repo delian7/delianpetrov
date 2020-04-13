@@ -117,5 +117,5 @@ local_env.yml
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-google_cloud_secrets.zip
-config/google_cloud
+
+/config/google_cloud

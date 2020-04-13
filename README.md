@@ -6,8 +6,9 @@ Rails 5 Web App for https://delianpetrov.com.
 
 Setup Development Environment
 ======
-1. Extract `google_cloud_secrets.zip` to `./config`.
-2. start the server and install dependencies by running
+1. Extract password protected `./config/secrets.zip` to `./config`.
+2. Drag `./google_cloud/master.key` back to `./config`
+3. start the server and install dependencies by running
 
 ```
 docker-compose up
@@ -24,8 +25,6 @@ docker-compose exec delianpetrov gcloud auth login
 Deploying
 ====
 
-1. Open bash on container
 ```
-docker-compose exec delianpetrov /bin/bash
+docker-compose exec delianpetrov bin/deploy
 ```
-2. Run `bin/deploy`
