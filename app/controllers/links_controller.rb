@@ -13,8 +13,11 @@ class LinksController < ApplicationController
   end
 
   def list
-    redirect_to root_path, notice:
-          "#{Link.all.collect {|link| link.name + " --> " + link.url}.join("<br>")}"
+    json = Link.all.map do |link|
+      {:name => link.name, :url => link.url}
+    end
+
+    render :json => JSON.pretty_generate(json)
   end
 
   def go_to_url
