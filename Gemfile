@@ -10,7 +10,7 @@ gem 'google-cloud-firestore', '~> 0.25.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'foreman'
