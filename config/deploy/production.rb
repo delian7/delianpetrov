@@ -7,12 +7,13 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server '35.202.139.248', user: 'delianpetrov0_gmail_com', roles: %w{app db web}
+
 
 set :ssh_options, {
-  forward_agent: true,
-  auth_methods: ['publickey'],
-  keys: %w(./config/google_cloud/google_compute_engine)
+  # forward_agent: true,
+  # auth_methods: ['publickey'],
+  # keys: %w(./config/google_cloud/google_compute_engine)
+  password: 'Xhets9.Nge3EN_Wyr'
 }
 
 set :bundle_flags, '--deployment'
