@@ -14,5 +14,5 @@ services:
     tty: true
     environment:
       - EDITOR=nano
-      - GOOGLE_APPLICATION_CREDENTIALS=./config/google_cloud/secrets.json
+      - GOOGLE_APPLICATION_CREDENTIAL_FILE=./config/google_cloud/secrets.json
     container_name: delianpetrov
