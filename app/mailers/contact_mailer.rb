@@ -7,6 +7,6 @@ class ContactMailer < ApplicationMailer
     @phone = phone
     @message = message
 
-    mail(to: "hello@delianpetrov.com", subject: "#{@name} contacted you via delianpetrov.com", reply_to: @email)
+    mail(to: 'hello@delianpetrov.com', subject: "#{@name} contacted you via delianpetrov.com", reply_to: @email)
   end
 end
