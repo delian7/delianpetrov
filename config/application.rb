@@ -15,15 +15,16 @@ module Delianpetrov
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    config.action_controller.forgery_protection_origin_check = false
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      address:              Rails.application.credentials[:smtp_host],
-      port:                 465,
-      user_name:            Rails.application.credentials[:smtp_username],
-      password:             Rails.application.credentials[:smtp_password],
-      authentication:       :login,
-      ssl:                  true,
-      tls:                  true,
+      address: Rails.application.credentials[:smtp_host],
+      port: 465,
+      user_name: Rails.application.credentials[:smtp_username],
+      password: Rails.application.credentials[:smtp_password],
+      authentication: :login,
+      ssl: true,
+      tls: true,
       enable_starttls_auto: true
     }
 
