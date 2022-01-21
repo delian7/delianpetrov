@@ -1,4 +1,4 @@
-FROM ruby:2.5.3
+FROM ruby:2.6.9
 
 RUN apt-get update
 RUN apt-get install -y --allow-unauthenticated build-essential curl git nodejs apt-transport-https ca-certificates gnupg nano
