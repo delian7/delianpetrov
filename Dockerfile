@@ -11,7 +11,7 @@ WORKDIR /code
 ADD Gemfile .
 ADD Gemfile.lock .
 
-RUN bundle update
+RUN bundle install
 
 ADD . .
 
