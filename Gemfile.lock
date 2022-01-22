@@ -296,8 +296,8 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.1.5)
   mimemagic!
-  puma (~> 3.12.6)
-  rails (~> 5.2.6)
+  puma (~> 3.11)
+  rails (~> 5.2.2)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

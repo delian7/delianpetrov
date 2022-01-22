@@ -19,10 +19,10 @@ gem 'listen', '~> 3.1.5'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.12.6'
+gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
-gem 'rails', '~> 5.2.6'
+gem 'rails', '~> 5.2.2'
 gem 'sass-rails', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
