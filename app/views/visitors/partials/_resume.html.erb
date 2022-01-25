@@ -1,3 +1,7 @@
 <iframe width="100%" id="resume-container">
   <div id="resume"></div>
 </iframe>
+
+<%= javascript_tag do %>
+  const showResume = <%= params[:resume].present? %>;
+<% end %>

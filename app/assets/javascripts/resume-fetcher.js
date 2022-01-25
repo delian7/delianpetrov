@@ -5,7 +5,7 @@ $(document).ready(() => {
   const iframeBody = iframe.contentDocument.body;
   let originalHeight = null;
 
-  $( window ).resize(function() {
+  $(window).resize(function() {
     if($("#resume-modal").hasClass("in")) {
       resizeResume();
     }
@@ -36,4 +36,8 @@ $(document).ready(() => {
 
   injectResume();
   resizeResume();
+
+  if (showResume) {
+    $("#resume-modal").modal("show");
+  }
 });
