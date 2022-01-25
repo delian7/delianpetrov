@@ -26,7 +26,7 @@ $(document).ready(() => {
   }
 
   injectResume = async () => {
-    const response = await fetch("https://raw.githubusercontent.com/delian7/pandoc_resume/master/output/resume.html");
+    const response = await fetch("https://docs.google.com/document/d/e/2PACX-1vQvLYQdg5c-a0moi7KaEU_7XdHL0PhS21-MojgPvssJ0tfkhOjrKgNIkC5ADbV5U85zKUI4WKQxblG-/pub?embedded=true");
     const html = await response.text();
 
     const iframe = document.querySelector("#resume-container");
@@ -35,4 +35,5 @@ $(document).ready(() => {
   }
 
   injectResume();
+  resizeResume();
 });
