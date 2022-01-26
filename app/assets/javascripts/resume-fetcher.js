@@ -37,7 +37,9 @@ $(document).ready(() => {
   injectResume();
   resizeResume();
 
-  if (showResume) {
-    $("#resume-modal").modal("show");
-  }
+  setTimeout({
+    if (showResume) {
+      $("#resume-modal").modal("show");
+    }
+  }, 50);
 });
