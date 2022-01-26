@@ -32,14 +32,12 @@ $(document).ready(() => {
     const iframe = document.querySelector("#resume-container");
     const iframeBody = iframe.contentDocument.body;
     iframeBody.innerHTML = html;
+
+    if (showResume) {
+      $("#resume-modal").modal("show");
+    }
   }
 
   injectResume();
   resizeResume();
-
-  setTimeout({
-    if (showResume) {
-      $("#resume-modal").modal("show");
-    }
-  }, 50);
 });
