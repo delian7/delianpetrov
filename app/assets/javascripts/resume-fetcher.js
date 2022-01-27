@@ -23,6 +23,7 @@ $(document).ready(() => {
     $("#resume-container").css({height: `${originalHeight}px`});
     let offsetHeight = iframeBody.scrollHeight;
     $("#resume-container").css({height: `${offsetHeight+5}px`});
+    $('#resume-container').contents().find("div").css('padding', '10pt').css('max-width', '1000pt');
   }
 
   injectResume = async () => {
