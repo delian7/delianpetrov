@@ -1,8 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  host: <%= ENV["POSTGRES_HOST"] || "localhost" %>
+  username: <%= ENV["POSTGRES_USERNAME"] || "admin" %>
+  password: <%= ENV["POSTGRES_PASSWORD"] || "password" %>
+  pool: 5
+
 development:
-  dataset_id: e-tensor-234323
+  <<: *default
+  database: delianpetrov_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: delianpetrov_test
 
 production:
-  dataset_id: e-tensor-234323
-
-test:
-  dataset_id: e-tensor-234323
+  url: <%= ENV['DATABASE_URL'] %>

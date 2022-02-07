@@ -11,8 +11,25 @@ services:
       - ./:/code
       - /code/node_modules
     stdin_open: true
+    depends_on:
+      - db
     tty: true
     environment:
       - EDITOR=nano
       - GOOGLE_APPLICATION_CREDENTIAL_FILE=./config/google_cloud/secrets.json
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=db
     container_name: delianpetrov
+
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - ~/docker/postgresql/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=db
+    container_name: db
