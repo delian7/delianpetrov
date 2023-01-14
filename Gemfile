@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'foreman'
